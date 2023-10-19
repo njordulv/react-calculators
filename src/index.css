@@ -1,0 +1,12 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  background-color: #476767;
+  color: beige;
+  font-size: 16px;
+  line-height: 24px;
+}
