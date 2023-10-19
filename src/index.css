@@ -10,3 +10,69 @@ body {
   font-size: 16px;
   line-height: 24px;
 }
+
+h1 {
+  font-size: 70px;
+  line-height: 80px;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 20px;
+  border-radius: 6px;
+  border: 0;
+  width: 100%;
+  cursor: pointer;
+  color: lightyellow;
+  background-color: coral;
+  font-family: "PT Sans", sans-serif;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #f26241;
+}
+
+form {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 60px 0 40px;
+}
+
+label {
+  position: absolute;
+  top: -25px;
+  font-size: 17px;
+  line-height: 20px;
+  width: 100%;
+}
+
+input {
+  font-family: "PT Sans", sans-serif;
+  width: 100%;
+  border: 0;
+  background-color: whitesmoke;
+  height: 46px;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 10px 15px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+input::placeholder {
+  color: #ccc;
+}
+
+input:focus-visible {
+  transition: all 0.2s ease;
+  background-color: white;
+}
+
+input:focus-visible::placeholder {
+  transition: all 0.2s ease;
+  color: transparent;
+}

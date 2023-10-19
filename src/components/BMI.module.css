@@ -3,3 +3,27 @@
   max-width: 500px;
   margin: 0 auto;
 }
+
+.bmiField {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: start;
+}
+
+.bmiError {
+  position: absolute;
+  bottom: -13px;
+  left: 0;
+  font-size: 11px;
+  line-height: 13px;
+  color: #f26241;
+}
+
+.bmiButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
