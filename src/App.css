@@ -9,3 +9,28 @@
   margin: 50px auto;
   box-sizing: border-box;
 }
+
+.buttons {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 10px;
+}
+
+.button {
+  padding: 10px 15px;
+  font-size: 20px;
+  border-radius: 6px;
+  border: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: lightyellow;
+  background-color: coral;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #f26241;
+}

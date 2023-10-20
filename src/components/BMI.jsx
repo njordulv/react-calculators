@@ -1,6 +1,7 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 import styles from "./BMI.module.css"
-import BMIformula from "../data/BMIformula"
+import BMIformula from "../data/formulas"
 
 const BMI = () => {
   const [data, setData] = useState({ height: "", weight: "", age: "" })
@@ -9,6 +10,7 @@ const BMI = () => {
   const [errorHeight, setErrorHeight] = useState("")
   const [errorWeight, setErrorWeight] = useState("")
   const [errorAge, setErrorAge] = useState("")
+  const navigate = useNavigate()
 
   const handleInputChange = (text, name) => {
     const value = text.target.value
@@ -115,7 +117,7 @@ const BMI = () => {
     }
 
     if (!hasError) {
-      setResult(BMIresult)
+      navigate("results", { state: { result, BMIresult } })
     }
   }
 
@@ -162,14 +164,15 @@ const BMI = () => {
               onChange={(e) => handleInputChange(e, "age")}
             />
           </div>
-          <div className={styles.bmiButtons}>
-            <button type="submit">Calculate</button>
-            <button type="button" onClick={clearHandler}>
+          <div className="buttons">
+            <button type="submit" className="button">
+              Calculate
+            </button>
+            <button type="button" className="button" onClick={clearHandler}>
               Clear
             </button>
           </div>
         </form>
-        {result && <div className={styles.result}>Your BMI = {result}</div>}
       </div>
     </>
   )
