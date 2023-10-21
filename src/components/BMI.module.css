@@ -15,7 +15,7 @@
 
 .bmiError {
   position: absolute;
-  bottom: -13px;
+  top: 46px;
   left: 0;
   font-size: 11px;
   line-height: 13px;
@@ -27,6 +27,11 @@
   border-radius: 4px;
   border: 2px solid rgba(255, 255, 255, 0.5);
   margin: 0 0 30px;
+  text-align: left;
+}
+
+.bmiRes p:last-child {
+  margin-bottom: 0;
 }
 
 .bmiBack {

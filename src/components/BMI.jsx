@@ -20,11 +20,11 @@ const BMI = () => {
       if (!value) {
         setErrorHeight("")
       } else if (isNaN(value)) {
-        setErrorHeight("Please state only numbers")
+        setErrorHeight("Ensure you input digits only")
       } else if (value < 120) {
-        setErrorHeight("Please state at least 120 cm")
-      } else if (value > 250) {
-        setErrorHeight("Sorry, the maximum height is 250 cm")
+        setErrorHeight("The minimum allowable height is 120 cm")
+      } else if (value > 240) {
+        setErrorHeight("The maximum allowable height is 240 cm")
       } else {
         setErrorHeight("")
       }
@@ -34,11 +34,11 @@ const BMI = () => {
       if (!value) {
         setErrorWeight("")
       } else if (isNaN(value)) {
-        setErrorWeight("Please state only numbers")
+        setErrorWeight("Ensure you input digits only")
       } else if (value < 40) {
-        setErrorWeight("Please state at least 40 kg")
-      } else if (value > 250) {
-        setErrorWeight("Sorry, state a smaller number")
+        setErrorWeight("Kindly input a minimum of 40 kilograms")
+      } else if (value > 240) {
+        setErrorWeight("Please specify a lower value")
       } else {
         setErrorWeight("")
       }
@@ -48,12 +48,12 @@ const BMI = () => {
       if (!value) {
         setErrorAge("")
       } else if (isNaN(value)) {
-        setErrorAge("Please state only numbers")
+        setErrorAge("Ensure you input digits only")
       } else if (value < 18) {
-        setErrorAge("Sorry, you must be over 18 y.o.")
+        setErrorAge("You must be over 18 y.o.")
       } else if (value > 100) {
         setErrorAge(
-          `Are you sure you are ${value} years old? :) Please, state your real age.`
+          `Is it correct that you are ${value} years of age? Kindly provide your accurate age`
         )
       } else {
         setErrorAge("")
@@ -70,13 +70,13 @@ const BMI = () => {
       setErrorHeight("This is a required field")
       hasError = true
     } else if (isNaN(data.height)) {
-      setErrorHeight("Please state only numbers")
+      setErrorHeight("Ensure you input digits only")
       hasError = true
     } else if (data.height < 120) {
-      setErrorHeight("Please state at least 120 cm")
+      setErrorHeight("The minimum allowable height is 120 cm")
       hasError = true
     } else if (data.height > 250) {
-      setErrorHeight("Sorry, the maximum height is 250 cm")
+      setErrorHeight("The maximum allowable height is 240 cm")
       hasError = true
     } else {
       setErrorHeight("")
@@ -86,13 +86,13 @@ const BMI = () => {
       setErrorWeight("This is a required field")
       hasError = true
     } else if (isNaN(data.weight)) {
-      setErrorWeight("Please state only numbers")
+      setErrorWeight("Ensure you input digits only")
       hasError = true
     } else if (data.weight < 40) {
-      setErrorWeight("Please state at least 40 kg")
+      setErrorWeight("Kindly input a minimum of 40 kilograms")
       hasError = true
     } else if (data.weight > 250) {
-      setErrorWeight("Sorry, state a smaller number")
+      setErrorWeight("Please specify a lower value")
       hasError = true
     } else {
       setErrorWeight("")
@@ -102,14 +102,14 @@ const BMI = () => {
       setErrorAge("This is a required field")
       hasError = true
     } else if (isNaN(data.age)) {
-      setErrorAge("Please state only numbers")
+      setErrorAge("Ensure you input digits only")
       hasError = true
     } else if (data.age < 18) {
-      setErrorAge("Sorry, you must be over 18 y.o.")
+      setErrorAge("You must be over 18 y.o.")
       hasError = true
     } else if (data.age > 100) {
       setErrorAge(
-        `Are you sure you are ${data.age} years old? Please, state your real age.`
+        `Is it correct that you are ${data.age} years of age? Kindly provide your accurate age`
       )
       hasError = true
     } else {
@@ -135,7 +135,7 @@ const BMI = () => {
       <div className={styles.bmiWrapper}>
         <form onSubmit={handleSubmitForm}>
           <div className={styles.bmiField}>
-            <label>Enter your height</label>
+            <label>Input your height (in cm)</label>
             <span className={styles.bmiError}>{errorHeight}</span>
             <input
               type="text"
@@ -145,7 +145,7 @@ const BMI = () => {
             />
           </div>
           <div className={styles.bmiField}>
-            <label>Enter your weight</label>
+            <label>Input your weight (in kg)</label>
             <span className={styles.bmiError}>{errorWeight}</span>
             <input
               type="text"
@@ -155,7 +155,7 @@ const BMI = () => {
             />
           </div>
           <div className={styles.bmiField}>
-            <label>Enter your age</label>
+            <label>Input your age</label>
             <span className={styles.bmiError}>{errorAge}</span>
             <input
               type="text"
